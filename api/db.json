@@ -1,3 +1,58 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "name": "go grocery shopping",
+      "dueDate": "2019-02-16",
+      "description": "don't forget beans",
+      "id": 1
+    },
+    {
+      "name": "clean house",
+      "dueDate": "2019-02-22",
+      "description": "especially the fridge",
+      "id": 2
+    },
+    {
+      "name": "cool stuff",
+      "dueDate": "2019-02-13",
+      "description": "rad",
+      "id": 3
+    },
+    {
+      "name": "dkjasgdjksf",
+      "dueDate": "2019-02-13",
+      "description": "khdaglkhrkeu",
+      "id": 4
+    },
+    {
+      "name": "cook dinner",
+      "dueDate": "2019-02-13",
+      "description": "make noodles",
+      "id": 5
+    },
+    {
+      "name": "rock and roll",
+      "dueDate": "2019-02-13",
+      "description": "all night long",
+      "id": 6
+    },
+    {
+      "name": "jlkaghdlkrjeoiru",
+      "dueDate": "2019-02-12",
+      "description": "hglkasroierue",
+      "id": 7
+    },
+    {
+      "name": "kgfjkdsre",
+      "dueDate": "2019-02-15",
+      "description": "diauroier8",
+      "id": 8
+    },
+    {
+      "name": "make burritos",
+      "dueDate": "2019-02-16",
+      "description": "delicious",
+      "id": 9
+    }
+  ]
 }

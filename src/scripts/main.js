@@ -1,36 +1,22 @@
 // Add an event listener to the add button
 
-// When we click on the add button, get the user's input
+printAllTasks();
 
-// Create a new task object
+document.querySelector("#add-btn").addEventListener("click", () => {
+  const taskValue = document.querySelector("#task-input").value;
+  const dateValue = document.querySelector("#date-input").value;
+  const descriptionValue = document.querySelector("#description-input").value;
 
-// Post the taskObject to the database
+  const taskToAdd = {
+    name: taskValue,
+    dueDate: dateValue,
+    description: descriptionValue
+  };
 
-// Then get all the tasks and print them to the DOM
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  createTask(taskToAdd).then(() => {
+    printAllTasks();
+  });
+});
 
 
 

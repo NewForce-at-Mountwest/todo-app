@@ -3,23 +3,35 @@
 printAllTasks();
 
 document.querySelector("#add-btn").addEventListener("click", () => {
-  const taskValue = document.querySelector("#task-input").value;
-  const dateValue = document.querySelector("#date-input").value;
-  const descriptionValue = document.querySelector("#description-input").value;
+  //   const taskValue = document.querySelector("#task-input").value;
+  //   const dateValue = document.querySelector("#date-input").value;
+  //   const descriptionValue = document.querySelector("#description-input").value;
 
-  const taskToAdd = {
-    name: taskValue,
-    dueDate: dateValue,
-    description: descriptionValue
-  };
+  const taskToAdd = buildTaskObject(
+    document.querySelector("#task-input").value,
+    document.querySelector("#date-input").value,
+    document.querySelector("#description-input").value
+  );
+
+  console.log(taskToAdd);
 
   createTask(taskToAdd).then(() => {
     printAllTasks();
   });
 });
 
+// const createCoffeeDrink = (nameParam, baristaParam, locationParam) => {
+//   return {
+//     name: nameParam,
+//     barista: baristaParam,
+//     location: locationParam
+//   };
+// };
 
-
+// const latte = createCoffeeDrink("latte", "Henry", "Frothy Monkey");
+// const americano = createCoffeeDrink("americano", "Jane", "Frothy Monkey");
+// const capuccino = createCoffeeDrink("capuccino", "Jane", "Frothy Monkey");
+// console.log(latte, americano, capuccino);
 
 // ---------- DELETE --------------//
 // Add a delete button to the dom component

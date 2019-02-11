@@ -53,6 +53,12 @@
       "dueDate": "2019-02-16",
       "description": "delicious",
       "id": 9
+    },
+    {
+      "name": "do practice exercises",
+      "dueDate": "2019-02-21",
+      "description": "JAVASCRIIPT",
+      "id": 10
     }
   ]
 }

@@ -20,6 +20,17 @@ document.querySelector("#add-btn").addEventListener("click", () => {
   });
 });
 
+document.querySelector("#task-container").addEventListener("click", () => {
+  if (event.target.classList.contains("delete-btn")) {
+
+    const taskId = event.target.id.split("-")[1];
+    deleteTask(taskId)
+    .then(() => {
+      printAllTasks()
+    })
+  }
+});
+
 // const createCoffeeDrink = (nameParam, baristaParam, locationParam) => {
 //   return {
 //     name: nameParam,

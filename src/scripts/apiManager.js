@@ -8,6 +8,11 @@ const createTask = taskObject => {
   });
 };
 
+const deleteTask = (taskId) => {
+  return fetch(`http://localhost:8088/tasks/${taskId}`, {
+    method: "DELETE"
+  })
+}
 const getAllTasks = () => {
   return fetch("http://localhost:8088/tasks").then(tasks => tasks.json());
 };

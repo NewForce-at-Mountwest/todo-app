@@ -8,5 +8,6 @@ const buildSingleTask = (singleTaskObject) => {
       <p>${singleTaskObject.description}</p>
       <p>${singleTaskObject.dueDate}</p>
     </label>
+    <a class="btn-floating btn-small waves-effect waves-light orange"><i id="delete-${singleTaskObject.id}" class="material-icons delete-btn">delete</i></a>
   </div>`
 }

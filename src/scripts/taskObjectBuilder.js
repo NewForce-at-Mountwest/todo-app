@@ -4,6 +4,7 @@ const buildTaskObject = (taskNameParam, taskDateParam, taskDescriptionParam) => 
     return {
         name: taskNameParam,
         dueDate: taskDateParam,
-        description: taskDescriptionParam
+        description: taskDescriptionParam,
+        completed: false
       };
 }

@@ -8,13 +8,31 @@ const createTask = taskObject => {
   });
 };
 
-const deleteTask = (taskId) => {
+const deleteTask = taskId => {
   return fetch(`http://localhost:8088/tasks/${taskId}`, {
     method: "DELETE"
-  })
-}
+  });
+};
 const getAllTasks = () => {
   return fetch("http://localhost:8088/tasks").then(tasks => tasks.json());
 };
 
-// .then((response) => {
+const markAsComplete = idParam => {
+  return fetch(`http://localhost:8088/tasks/${idParam}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({completed: true})
+  });
+};
+
+const markAsIncomplete = idParam => {
+  return fetch(`http://localhost:8088/tasks/${idParam}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({completed: false})
+  });
+};

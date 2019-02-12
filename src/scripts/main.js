@@ -1,11 +1,9 @@
-// Add an event listener to the add button
+
 
 printAllTasks();
 
+// Event listener for adding a new task
 document.querySelector("#add-btn").addEventListener("click", () => {
-  //   const taskValue = document.querySelector("#task-input").value;
-  //   const dateValue = document.querySelector("#date-input").value;
-  //   const descriptionValue = document.querySelector("#description-input").value;
 
   const taskToAdd = buildTaskObject(
     document.querySelector("#task-input").value,
@@ -13,12 +11,13 @@ document.querySelector("#add-btn").addEventListener("click", () => {
     document.querySelector("#description-input").value
   );
 
-  console.log(taskToAdd);
-
   createTask(taskToAdd).then(() => {
     printAllTasks();
   });
 });
+
+
+// Event listener for entire task container element
 
 document.querySelector("#task-container").addEventListener("click", () => {
   if (event.target.classList.contains("delete-btn")) {
@@ -28,37 +27,17 @@ document.querySelector("#task-container").addEventListener("click", () => {
     .then(() => {
       printAllTasks()
     })
+  } else if(event.target.classList.contains("checkbox")){
+    const taskId = event.target.id.split("-")[1];
+    if(document.querySelector(`#checkbox-${taskId}`).checked){
+      markAsComplete(taskId)
+    } else {
+      markAsIncomplete(taskId)
+    }
+
   }
 });
 
-// const createCoffeeDrink = (nameParam, baristaParam, locationParam) => {
-//   return {
-//     name: nameParam,
-//     barista: baristaParam,
-//     location: locationParam
-//   };
-// };
 
-// const latte = createCoffeeDrink("latte", "Henry", "Frothy Monkey");
-// const americano = createCoffeeDrink("americano", "Jane", "Frothy Monkey");
-// const capuccino = createCoffeeDrink("capuccino", "Jane", "Frothy Monkey");
-// console.log(latte, americano, capuccino);
 
-// ---------- DELETE --------------//
-// Add a delete button to the dom component
 
-// When the user clicks the delete button, get that item's id and delete it from the DB
-
-// Refresh the list
-
-// ---------------- PATCH -------------------------//
-// Add an event listener to the check box
-// When the check box is checked, make a PATCH request to the db to change the completed property from false to true
-// Refresh the list
-
-//------------ PUT ------------------//
-// When the user clicks the edit button, build a form with that item's information
-// add an event listener to the submit button
-// build a new object representing that task
-//PUT it to the database
-// refresh the list
